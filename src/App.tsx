@@ -4,13 +4,28 @@ import { Header } from './site/Header';
 import { Body } from './site/Body';
 import { Footer } from './site/Footer';
 import { NewComponent } from './map/NewComponent';
+import { Button } from './components/button';
 
 
 function App() {
+
+const Button1Foo=(subscriber: string, age: number)=>{
+  console.log(subscriber, age);
+  
+}
+const Button2Foo=(subscriber: string)=>{
+  console.log(subscriber);
+}
+const Button3Foo=()=>{
+  console.log('I am stypid button');
+  
+}
+
 return(
   <div className='App'>
-    <button>MyYouTubeChanel_1</button>
-    <button>MyYouTubeChanel_2</button>
+    <Button name={'MyYouTubeChanel_1'} callBack={()=>Button1Foo('i`m vasiliy', 21)}/>
+    <Button name={'MyYouTubeChanel_2'} callBack={()=>Button2Foo('i`m karuto')}/>
+    <Button name={'MyYouTubeChanel_3'} callBack={Button3Foo}/>
   </div>
 )
 }
