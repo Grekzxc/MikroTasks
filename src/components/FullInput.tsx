@@ -11,7 +11,6 @@ export const FullInput = (props: FullInputPropsType) => {
 
     console.log(title);
     const onChangeInputHandler = (event: ChangeEvent<HTMLInputElement>) => {
-
         setTitle(event.currentTarget.value)
     }
 
